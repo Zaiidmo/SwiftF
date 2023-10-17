@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Young+Serif&display=swap');
 
 body{
-    margin-top: 0px;
-    margin-left:  auto;
-    margin-right: auto;
-    margin-bottom: 0px;
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
 }
@@ -166,12 +162,13 @@ h1, h2{
     display: grid;
     padding-top: 20px;
     grid-template-columns: 1fr 1fr;
-    width: 40%;
+    width: 70%;
     column-gap: 20px;
     row-gap: 20px;
 }
 
 .slider_section .detailsbox .partners p{
+    width: 300px;
     font-size: 15px;
     letter-spacing: 0.5px;
     color: #595959;
@@ -750,3 +747,65 @@ margin: 0px;
 /* END OF STYLESHEET */
 
 /* Media Queries */ 
+ @media screen and (max-width: 767px) {
+    body {
+        text-align: center;
+    }
+    .header_section {
+        width: 767px;
+        padding: 0px 80px;
+    }
+    .navbar-nav{
+        margin: 0px;
+        display: none;
+    }
+    .navbar {
+        margin: 0px;
+    }
+    .slider_section {
+        flex-direction: column;
+        align-content: center;
+        padding: 0px;
+    }
+    .slider_section .detailsbox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .slider_section .name {
+        bottom: -830px;
+    }
+    .partners {
+        display: flex;
+        flex-direction: column;
+        align-items: center;        
+    }
+    .why_section{
+        flex-direction: column;
+        padding: 80px;
+        align-items: center;
+    }
+    .why_infos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .questions {
+        padding: 40px;
+        align-items: center;
+        align-content: center;
+    }
+    .questions p{
+        width: 500px;
+        text-align: center;
+    }
+    footer .footertop {
+        padding: 80px;
+        flex-direction: column;
+        gap: 50px;
+    }
+    footer .logo {
+        justify-content: center;
+    }
+    
+ }
