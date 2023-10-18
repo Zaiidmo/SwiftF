@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,9 +15,12 @@
     <!--Stylesheet-->
     <link href="styles/normalize.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
+    <script src="./styles/style.js"></script>
 
 </head>
+
 <body>
+    <!-- Header Section -->
     <!-- Header Section -->
     <header class="header_section">
         <nav class="navbar">
@@ -28,7 +32,12 @@
                     </span>
                 </a>
             </div>
-            <div class="navigation">
+            <div class="burger">
+                <div class="line line1"></div>
+                <div class="line line2"></div>
+                <div class="line line3"></div>
+            </div>
+            <div class="navigation show">
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link active" href="index.html">HOME</a>
@@ -36,8 +45,13 @@
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">ABOUT US</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item has-dropdown">
                         <a class="nav-link" href="services.html">OUR SERVICES</a>
+                        <ul class="dropdown">
+                            <li class="dropitem"><a href="services.html">Home Services</a></li>
+                            <li class="dropitem"><a href="services.html">Gardening services</a></li>
+                            <li class="dropitem"><a href="services.html">Tech Services</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">CONTACT US</a>
@@ -59,15 +73,16 @@
     <!-- Slider Section -->
     <section class="slider_section">
         <div class="detailsbox">
-            <h1>Repair and 
-                Maintenance 
-                Services 
+            <h1>Repair and
+                Maintenance
+                Services
             </h1>
             <p>
-                We are here to help you take care of your repair and maintenance needs with the best service tailored just for you.
+                We are here to help you take care of your repair and maintenance needs with the best service tailored
+                just for you.
             </p>
             <a href="contact.html" target="_blank">
-                Contact Us 
+                Contact Us
             </a>
             <div class="partners">
                 <p>Top trusted companies in Morocco</p>
@@ -90,7 +105,7 @@
                 </span>
             </div>
         </div>
-        
+
     </section>
 
     <!--Why Section-->
@@ -131,14 +146,15 @@
     <section class="questions">
         <div class="questions">
             <h3> Complex Questions ?</h3>
-            <p>Request for a personalized budget for your legal problem. We will send you a coupe options in 24 hours. You can have free consult , if a our first customer</p>
+            <p>Request for a personalized budget for your legal problem. We will send you a coupe options in 24 hours.
+                You can have free consult , if a our first customer</p>
             <a href="contactus.html" target="_blank">
-                    <img src="./Images/icones/Phone.png" alt="phone">
-                    Call Now
+                <img src="./Images/icones/Phone.png" alt="phone">
+                Call Now
             </a>
         </div>
     </section>
-    
+
     <!-- Footer Section -->
     <footer id="mainFooterSection">
         <div class="footertop">
@@ -187,13 +203,18 @@
             <div class="rights">
                 <h4>&copy; 2023 Swiftfix, All Rights Reserved.</h4>
             </div>
-            <div class="social"> 
-                <a href="https://www.instagram.com/" target="_blank"><img src="./Images/icones/insta.svg" alt="Instagram"></a>
-                <a href="https://www.facebook.com/" target="_blank"><img src="./Images/icones/Facebook.svg" alt="Facebook"></a>
-                <a href="https://www.twitter.com/" target="_blank"><img src="./Images/icones/twitter.svg" alt="Twitter"></a>
-                <a href="https://www.youtube.com/" target="_blank"><img src="./Images/icones/youtube.svg" alt="Youtube"></a>
+            <div class="social">
+                <a href="https://www.instagram.com/" target="_blank"><img src="./Images/icones/insta.svg"
+                        alt="Instagram"></a>
+                <a href="https://www.facebook.com/" target="_blank"><img src="./Images/icones/Facebook.svg"
+                        alt="Facebook"></a>
+                <a href="https://www.twitter.com/" target="_blank"><img src="./Images/icones/twitter.svg"
+                        alt="Twitter"></a>
+                <a href="https://www.youtube.com/" target="_blank"><img src="./Images/icones/youtube.svg"
+                        alt="Youtube"></a>
             </div>
         </div>
     </footer>
 </body>
+
 </html>

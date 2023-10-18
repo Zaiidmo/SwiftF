@@ -1,22 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Young+Serif&display=swap');
 
 body{
+    margin-top: 0px;
+    margin-left:  auto;
+    margin-right: auto;
+    margin-bottom: 0px;
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
 }
 
 /* Navigation Bar*/
-
-.navbar-brand{
-font-style: normal;
-font-weight: bold;
-font-size: 20px;
-}
-.navbar-brand img{
-    width: 20px;
-    height: 20px;
-    
-}
 
 a{
     text-decoration: none;
@@ -31,34 +24,25 @@ a{
     width: 100%;
     z-index: 1000;
     color: black;
-    justify-content: space-between;
-}
-
-nav {
-    height: 70px;
-    display: flex;
-    justify-content: space-between;
-    background-color: white;
-    align-items: center;
+    top: 0px;
 }
 .navbar{
+    height: 70px;
+    background-color: white;
     margin-left: 200px;
     margin-right: 200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
-.navbar-nav {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    list-style: none;
-    padding-top: 5px;
-    cursor: pointer;
-    line-height: 60px;
-    text-align: center;
-    margin-right: 100px;
+.navbar-brand{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+ }
+.navbar-brand img{
+    width: 20px;
+    height: 20px;    
 }
 .navigation {
     display: flex;
@@ -66,6 +50,48 @@ nav {
     justify-content: space-between;
     align-items: center;
 }
+.navigation a{
+    font-weight: bolder;
+}
+.navbar-nav {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    list-style: none;
+    cursor: pointer;
+}
+.dropdown {
+    margin-top: 5px; ;
+    display: none ;
+    position: absolute;
+    z-index: 1001;
+    background-color: white;
+    list-style: none;
+    padding: 10px;
+    transform: translateX(-20%);    
+    background-color: #F2F7FF;
+    border-radius: 20%;
+}
+.has-dropdown:hover .dropdown{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+}
+/* .burger {
+    display: none;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+.line {
+    height: 5px;
+    width: 35px;
+    margin: 0.5rem 0;
+    background: #000000;
+    border-radius: 9999px;
+    /* transition: transform 0.75s ease, opacity 0.75s ease; */
+} */
 .navigation a{
     font-weight: bolder;
 }
@@ -162,13 +188,12 @@ h1, h2{
     display: grid;
     padding-top: 20px;
     grid-template-columns: 1fr 1fr;
-    width: 70%;
+    width: 40%;
     column-gap: 20px;
     row-gap: 20px;
 }
 
 .slider_section .detailsbox .partners p{
-    width: 300px;
     font-size: 15px;
     letter-spacing: 0.5px;
     color: #595959;
@@ -220,7 +245,7 @@ h1, h2{
     padding-top: 100px;
 }
 .why_section .why_infos h2{
-    width: 280px;
+    width: 220px;
     font-weight: bold;
     display: flex;
     letter-spacing: 10px;
@@ -685,6 +710,7 @@ margin: 0px;
     height: 200px;
 }
 .contact-form .send-button {
+    width: 600px;
     display: inline-block;
     text-transform: uppercase;
     padding: 10px 55px;
@@ -754,13 +780,55 @@ margin: 0px;
         width: 767px;
         padding: 0px 80px;
     }
-    .navbar-nav{
-        margin: 0px;
+    .navbar {
+        margin: 0;
+        width: 80%;
+    }
+    .navigation {
         display: none;
     }
-    .navbar {
-        margin: 0px;
+    /* .navbar .show .line1 {
+        transform: translate(-10px) rotate(45deg) translate(15px);
     }
+    .navbar .show .line2 {
+        opacity: 0;
+    }
+    .navbar .show .line3 {
+        transform: translate(-10px) rotate(-45deg) translate(15px);
+    }.navbar.show .navigation {
+        transform: translateX(0%);
+    }
+    .burger {
+        display: block;
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out; 
+    }
+    .navigation {
+        position: absolute;
+        top: 80px;
+        right: 175px;
+        flex-direction: column;
+        align-content: center;
+        justify-content: space-around;
+        background: #005582;
+        border-radius: 10%;
+        z-index: 1000;
+    }
+    .navigation.show {
+        display: flex;
+    }
+    .navbar-nav {
+        flex-direction: column;
+        padding: 0px;
+    }
+    .navbar-nav a{
+        color: white;
+    }
+    .nav-item {
+        padding: 10px;
+        display: block;
+        color: #F2F7FF;
+    } */
     .slider_section {
         flex-direction: column;
         align-content: center;
@@ -854,4 +922,5 @@ margin: 0px;
     .informations .infos {
         text-align: left;
     }
+    
  }
