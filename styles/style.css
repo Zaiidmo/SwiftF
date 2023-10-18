@@ -220,7 +220,7 @@ h1, h2{
     padding-top: 100px;
 }
 .why_section .why_infos h2{
-    width: 220px;
+    width: 280px;
     font-weight: bold;
     display: flex;
     letter-spacing: 10px;
@@ -685,7 +685,6 @@ margin: 0px;
     height: 200px;
 }
 .contact-form .send-button {
-    width: 600px;
     display: inline-block;
     text-transform: uppercase;
     padding: 10px 55px;
@@ -807,5 +806,52 @@ margin: 0px;
     footer .logo {
         justify-content: center;
     }
-    
+    .cover {
+        height: auto;
+        width: 100%;
+        padding-top: 80px;
+    }
+    .about {
+        flex-direction: column;
+    }
+    .about-us {
+        padding-left: 0px !important;
+    }
+    .clients {
+        flex-direction: column !important ;
+    }
+    .service-cover {
+        width: 100%;
+        height: auto;
+        padding-top: 90px;
+    }
+    .service-cover h1 {
+        font-size: 72px;
+    }
+    .services {
+        grid-template-columns: 1fr;
+    }
+    .contact-cover{
+        width: 100%;
+        height: auto;
+        padding-top: 90px;
+    }
+    .contact-cover h1{
+        font-size: 72px;
+    }
+    .conversation h1{
+        font-size: 30px;
+    }
+    .contact-form {
+        width: 100%;
+    }
+    .informations {
+        flex-direction: column;
+    }
+    .informations iframe {
+        display: none;
+    }
+    .informations .infos {
+        text-align: left;
+    }
  }
