@@ -61,22 +61,25 @@ a{
     cursor: pointer;
 }
 .dropdown {
-    margin-top: 5px; ;
+    position: fixed;
+    top: 70px;
     display: none ;
-    /* position: absolute; */
     z-index: 1001;
     list-style: none;
     padding: 10px;
-    /* transform: translateX(-20%);     */
-    background-color: #004D7B;
+    transform: translateX(-20%);    
+    background-color: #0361ee;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
 }
 .has-dropdown button {
     background-color: transparent;
     border: none;
-    color: white;
+    color: rgb(0, 0, 0);
     font-weight: bold;
     cursor: pointer;
 }
+
 button:hover {
     color: #094B72;
 }
@@ -87,9 +90,7 @@ button a.active{
     display: flex;
     flex-direction: column;
     align-items: center;
-    align-content: center;
-    justify-content: space-around;
-    gap: 20px;
+    gap: 25px;
     height: auto;
 }
 
@@ -101,6 +102,9 @@ button a.active{
 }
 .nav-item a.active {
     color: #094B72;
+}
+.nav-item{
+    display: inline-block;
 }
 
 .navigation .search{
@@ -616,6 +620,43 @@ margin: 0px;
     letter-spacing: 3px;
 }
 
+/* FAQ section */
+.FAQ{
+    padding: 20px 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+}
+.FAQ h3 {
+    font-size: 48px ;
+    font-weight: lighter;
+    letter-spacing: 5px;
+}
+.collapse {
+    padding-left: 100px;
+    width: 100%;
+    height: 50px;
+    border: none;
+    /* border-radius: 30%; */
+    text-align: left;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.content { 
+    padding: 0 18 px;
+    display: none;
+    overflow: hidden;
+    
+}
+.coll, .collapse:hover {
+    background-color: #595959;
+}
+/* ------------------------------------ */
 /* Page "Our services" */ 
 /* Same Header */
 
@@ -779,6 +820,7 @@ margin: 0px;
     line-height: 0px;
     font-size: 15px;
 }
+
 .info-item h2{
     font-style: normal;
     font-weight: bolder;
@@ -805,7 +847,7 @@ margin: 0px;
         top: 70px;
         flex-direction: column;
         background-color: #0355cc;
-        width: 50%;
+        width: 100%;
         text-align: center;
         transition: 0.3s;
         z-index: 1000;
@@ -818,11 +860,20 @@ margin: 0px;
         justify-content: center;
         padding: 0px;
     }
+    .has-dropdown button {
+        color: white;
+    }
     .navigation a{
         color: white ;
     }
     .navigation a.active{
         color: black;
+    }
+    .dropdown {
+        position: inherit;
+        margin-top: 20px;
+        transform: translateX(0px);
+        width: 700px;
     }
     /* HAMBURGER MENU */ 
     .burger{
