@@ -628,6 +628,7 @@ margin: 0px;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    background-color: #F2F7FF;
     
 }
 .FAQ h3 {
@@ -920,6 +921,15 @@ margin: 0px;
     }
     .why_section .why_infos h2{
         width: auto;
+    }
+    .FAQ {
+        width:auto;
+        height: auto;
+        font-size: small;
+    }
+    .collapse {
+        height: auto;
+        padding: 20px 10px;
     }
     .questions {
         padding: 40px;
