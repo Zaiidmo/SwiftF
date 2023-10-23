@@ -42,3 +42,36 @@ service.addEventListener("click", function() {
       moreservices.style.display = "grid";
     }
   });
+
+  //Modal for Services 
+
+// var btn = document.querySelectorAll(".modal-btn");
+// var modal = document.querySelectorAll(".modal");
+// var span = document.querySelectorAll(".close");
+// var i;
+// for(i=0; i<modal.length; i++){
+//   btn[i].addEventListner("click", function(event) {
+//     modal[i].style.display = "block";
+//     console.log("it's working")
+//   })
+//   span[i].onclick = function(event) {
+//     modal[i].style.display = "none";
+//   }
+
+//   window.onclick = function(event) {
+//     if (event.target == modal[i]) {
+//       modal[i].style.display = "none";
+//     }
+//   }
+// }
+
+const dialog = document.querySelectorAll("dialog");
+const showButton = document.querySelectorAll("dialog + button");
+const closeButton = document.querySelectorAll("dialog button");
+var i;
+
+for(i=0; i<dialog.length; i++){
+  showButton[i].addEventListener("click", () => {
+    dialog.showModal();
+  });
+}
