@@ -52,7 +52,6 @@ service.addEventListener("click", function() {
   for (let i = 0; i < modal.length; i++) {
     btn[i].addEventListener("click", function(event) {
       modal[i].style.display = "block";
-      console.log("it's working");
     });
   
     span[i].addEventListener("click", function(event) {
@@ -65,16 +64,50 @@ service.addEventListener("click", function() {
       }
     });
   }
+
+  // Form Validation
+  function validateForm() {
+    const nameInput = document.getElementById('name');
+    const phoneInput = document.getElementById('phone');
+    const emailInput = document.getElementById('email');
+    const subjectInput = document.getElementById('subject');
+    const messageInput = document.querySelector('.message-box');
   
+    // Check if the name is not empty
+    if (nameInput.value.trim() === '') {
+      alert('Name cannot be empty');
+      return false;
+    }
+  
+    // Check if the phone number is not empty and contains only numbers
+    if (phoneInput.value.trim() === '' || !/^\d+$/.test(phoneInput.value)) {
+      alert('Please enter a valid phone number');
+      return false;
+    }
+  
+    // Check if the email is valid using a simple regex
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(emailInput.value)) {
+      alert('Please enter a valid email address');
+      return false;
+    }
+  
+    // Check if the subject is not empty
+    if (subjectInput.value.trim() === '') {
+      alert('Subject cannot be empty');
+      return false;
+    }
+  
+    // Check if the message is not empty
+    if (messageInput.value.trim() === '') {
+      alert('Message cannot be empty');
+      return false;
+    }
+  
+    alert('Form submitted successfully!');
+    return true;
+  }
   
 
-// const dialog = document.querySelectorAll("dialog");
-// const showButton = document.querySelectorAll("dialog + button");
-// const closeButton = document.querySelectorAll("dialog button");
-// var i;
-
-// for(i=0; i<dialog.length; i++){
-//   showButton[i].addEventListener("click", () => {
-//     dialog.showModal();
-//   });
-// }
+  
+  

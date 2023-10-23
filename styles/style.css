@@ -584,6 +584,7 @@ margin: 0px;
       overflow: hidden;
       align-items: center;
       margin-top: 20px;
+      transition: transform 0.5s ease-in-out;
     }
 
     .testimonial .client {
@@ -597,6 +598,7 @@ margin: 0px;
       scroll-snap-align: start;
       box-sizing: border-box;
     }
+
 
     .testimonial .words {
       display: flex;
