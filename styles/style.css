@@ -18,7 +18,7 @@ a{
     color: black; 
 }
 .header_section {
-    background-color: white;
+    background-color: #F2F7FF;
     font-family: 'Poppins', sans-serif;
     position: fixed;
     width: 100%;
@@ -28,7 +28,7 @@ a{
 }
 .navbar{
     height: 70px;
-    background-color: white;
+    background-color: #F2F7FF;
     margin-left: 200px;
     margin-right: 200px;
     display: flex;
@@ -68,7 +68,7 @@ a{
     list-style: none;
     padding: 10px;
     transform: translateX(-20%);    
-    background-color: #0361ee;
+    background-color: #F2F7FF;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
 }
@@ -79,7 +79,9 @@ a{
     font-weight: bold;
     cursor: pointer;
 }
-
+.has-dropdown button:active {
+    color: black;
+}
 button:hover {
     color: #094B72;
 }
@@ -553,77 +555,97 @@ margin: 0px;
 }
 
 .testimonial {
-    padding: 30px 90px;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    /* align-content: center; */
-    text-align: center;
-}
-.testimonial h3{
-    font-size: 48px;
-    font-weight: lighter;
-    letter-spacing: 5px;
-}
-.testimonial p {
-    padding: 10px 20px;
-    width: 450px;
-    color: #595959;
-    margin: 0px;
-}
-.testimonial .clients {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    
-}
-.testimonial .client {
-    display: flex;
-    flex-direction: column;
-    width : 600px;
-    height: auto;
-    align-items: center;
-}
-.testimonial .words{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
+      padding: 30px 90px;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      overflow: hidden;
+    }
 
-.client-img img{
-    width: 50px;
-    height: 50px;
-}
+    .testimonial h3 {
+      font-size: 48px;
+      font-weight: lighter;
+      letter-spacing: 5px;
+    }
 
-.client-img {
-    display: flex;
-    flex-direction: row;
-    margin-top: 50px;
-    gap: 15px;
-    text-align: left;
-    /* line-height: 15px; */
-}
-.client-img h5{
-    margin: 0px;
-}
-.client-img .clientdetails {
-    display: flex;
-    flex-direction: column;
-    width: 200px;
-    font-weight: lighter;
-}
-.client-img .clientdetails h6{
-    margin-top: 15px;
-    letter-spacing: 3px;
-}
+    .testimonial p {
+      padding: 10px 20px;
+      width: 600px;
+      color: #595959;
+      margin: 0px;
+      font-size: 20px;
+    }
+
+    .testimonial .clients {
+      display: flex;
+      flex-direction: row;
+      width: 700px;
+      overflow: hidden;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .testimonial .client {
+      display: flex;
+      flex-direction: column;
+      width: 800px;
+      height: auto;
+      align-items: center;
+      line-height: 40px;
+      margin: 0 40px;
+      scroll-snap-align: start;
+      box-sizing: border-box;
+    }
+
+    .testimonial .words {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 20px;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .client-img img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+
+    .client-img {
+      display: flex;
+      flex-direction: row;
+      margin-top: 50px;
+      gap: 15px;
+      text-align: left;
+      align-items: center;
+    }
+
+    .client-img h5 {
+      margin: 0px;
+    }
+
+    .client-img .clientdetails {
+      display: flex;
+      flex-direction: column;
+      width: 200px;
+      font-weight: lighter;
+      line-height: 20px;
+    }
+
+    .client-img .clientdetails h6 {
+      margin-top: 15px;
+      letter-spacing: 3px;
+      margin-bottom: 0px;
+    }
+  
 
 /* FAQ section */
 .FAQ{
     padding: 20px 80px;
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -652,6 +674,7 @@ margin: 0px;
     padding: 0 18 px;
     display: none;
     overflow: hidden;
+    text-align: left;
     
 }
 .coll, .collapse:hover {
@@ -690,16 +713,31 @@ margin: 0px;
     justify-content: space-evenly;
     align-content: center;
 }
-.services .service img {
+.moreservices {
+    padding: 30px 90px;
+    /* display: grid; */
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 30px;
+    column-gap: 100px;
+    justify-content: space-evenly;
+    align-content: center;
+}
+.moreservices { 
+    padding: 0 18 px;
+    display: none;
+    overflow: hidden;
+    text-align: left;
+}
+.service img {
     width: 80px;
 }
-.services .service p {
+.service p {
     font-weight: bold;
     width: 350px;
     text-align: center;
 }
 
-.services .service {
+.service {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     display: flex;
     flex-direction: column;
@@ -707,6 +745,17 @@ margin: 0px;
     padding: 25px 10px;
     width: auto;
     height: 250px;
+}
+.services-coll {
+    padding-left: 100px;
+    width: 100%;
+    height: 50px;
+    border: none;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 20px;
 }
 
 .more {
@@ -871,6 +920,7 @@ margin: 0px;
         color: black;
     }
     .dropdown {
+        background-color: #0355cc;
         position: inherit;
         margin-top: 20px;
         transform: translateX(0px);
@@ -881,7 +931,7 @@ margin: 0px;
         display: block;
     }
     .burger.active .line1 {
-        transform: translateY(8px) rotate(45deg);
+        transform: translateY(10px) rotate(45deg);
     }
     .burger.active .line2 {
         opacity: 0;
@@ -959,9 +1009,6 @@ margin: 0px;
     .about-us {
         padding-left: 0px !important;
     }
-    .clients {
-        flex-direction: column !important ;
-    }
     .service-cover {
         width: 100%;
         height: auto;
@@ -972,6 +1019,13 @@ margin: 0px;
     }
     .services {
         grid-template-columns: 1fr;
+    }
+    .moreservices {
+        grid-template-columns: 1fr;
+    }
+    .services-coll {
+        height: auto;
+        padding: 20px 10px;
     }
     .contact-cover{
         width: 100%;

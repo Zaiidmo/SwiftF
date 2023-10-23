@@ -13,7 +13,7 @@ function myDropDown() {
 }
 
 //Collapsible FAQ 
-var coll = document.getElementsByClassName("collapse");
+var coll = document.querySelectorAll(".collapse");
 var i;
 
 for (i = 0; i < coll.length; i++) {
@@ -28,4 +28,17 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 
+//Collapsible Services
 
+var service = document.querySelector(".services-coll");
+var i;
+
+service.addEventListener("click", function() {
+  this.classList.toggle("coll");
+  var moreservices = this.nextElementSibling;
+  if (moreservices.style.display === "grid") {
+        moreservices.style.display = "none";
+    } else {
+      moreservices.style.display = "grid";
+    }
+  });
