@@ -114,6 +114,4 @@ service.addEventListener("click", function() {
     return true;
   }
   
-
-  
-  
+//Testimonials Carousel 

@@ -37,10 +37,10 @@
             <div class="navigation">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.html">HOME</a>
+                        <a class="nav-link" href="index.html">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">ABOUT US</a>
+                        <a class="nav-link active" href="about.html">ABOUT US</a>
                     </li>
                     <li class="nav-item has-dropdown">
                         <button class="drop-btn" onclick="myDropDown()">OUR SERVICES</button>
@@ -159,7 +159,7 @@
                     </div>
                 </div>
             </div>
-            <div class="client">
+            <div class="client fade">
                 <div class="words">
                     <h4>Dependable, Responsive, Professional Partner</h4>
                     <p>Fermin Apps has collaborated with Landify team for several projects such as Photo Sharing Apps and Custom Social Networking Apps. The experience has been pleasant, professional and exceeding our expectations. </p>
@@ -172,7 +172,7 @@
                     </div>
                 </div>
             </div>
-            <div class="client">
+            <div class="client fade">
                 <div class="words">
                     <h4>Incredible Experience</h4>
                     <p>We had an incredible experience working with Landify and were impressed they made such a big difference in only three weeks. Our team is so grateful for the wonderful improvements they made and their ability to get familiar with the concept so quickly.</p>
@@ -185,7 +185,7 @@
                     </div>
                 </div>
             </div>
-            <div class="client">
+            <div class="client fade">
                 <div class="words">
                     <h4>Dependable, Responsive, Professional Partner</h4>
                     <p>Fermin Apps has collaborated with Landify team for several projects such as Photo Sharing Apps and Custom Social Networking Apps. The experience has been pleasant, professional and exceeding our expectations. </p>
@@ -198,7 +198,7 @@
                     </div>
                 </div>
             </div>
-            <div class="client">
+            <div class="client fade">
                 <div class="words">
                     <h4>Incredible Experience</h4>
                     <p>We had an incredible experience working with Landify and were impressed they made such a big difference in only three weeks. Our team is so grateful for the wonderful improvements they made and their ability to get familiar with the concept so quickly.</p>
@@ -211,7 +211,7 @@
                     </div>
                 </div>
             </div>
-            <div class="client">
+            <div class="client fade">
                 <div class="words">
                     <h4>Dependable, Responsive, Professional Partner</h4>
                     <p>Fermin Apps has collaborated with Landify team for several projects such as Photo Sharing Apps and Custom Social Networking Apps. The experience has been pleasant, professional and exceeding our expectations. </p>
@@ -224,6 +224,24 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <!-- Buttons and dots  -->
+        <div class="btns">
+            
+            <button class="btn previous" onclick="show(-1)">
+                <<
+            </button>
+
+            <div>
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+
+            <button class="btn next" onclick="show(1)">
+                >>
+            </button>
         </div>
     </section>
 
