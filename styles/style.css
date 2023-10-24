@@ -116,7 +116,6 @@ button a.active{
     border-radius: 40px;
     padding: 10px;
     display: flex;
-    /* border: 1px dashed #004D7B; */
   }
   
   .search-btn {

@@ -83,16 +83,16 @@ service.addEventListener("click", function() {
     if (nameInput.value.trim() === '') {
       alert('Name cannot be empty');
       return false;
-    }
+    } 
   
     // Check if the phone number is not empty and contains only numbers
-    if (phoneInput.value.trim() === '' || !/^\d+$/.test(phoneInput.value)) {
+    if (phoneInput.value.trim() === '' || !/^\+\d+$/.test(phoneInput.value)) {
       alert('Please enter a valid phone number');
       return false;
     }
   
     // Check if the email is valid using a simple regex
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailRegex = /^[a-zA-Z0-9]+@[a-zA-Z]+\.[a-zA-Z]+$/;
     if (!emailRegex.test(emailInput.value)) {
       alert('Please enter a valid email address');
       return false;
