@@ -49,6 +49,7 @@ a{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    gap: 40px;
 }
 .navigation a{
     font-weight: bolder;
@@ -109,31 +110,50 @@ button a.active{
     display: inline-block;
 }
 
-.navigation .search{
+.search-box {
+    background: #FFF;
+    height:30px;
+    border-radius: 40px;
+    padding: 10px;
     display: flex;
+    /* border: 1px dashed #004D7B; */
+  }
+  
+  .search-btn {
+    color: #004D7B;
+    float: right;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
     align-items: center;
-}
-.navigation .search-toggle {
-    display: none;
-}
-.navigation .search-icon {
-    cursor: pointer;
-}
-
-.navigation .search-bar-container {
-    display: none;
-}
-.navigation .search-bar {
-    margin-right: 10px;
-    padding: 8px;
+    transition: 0.4s;
+  }
+  
+  .search-txt {
     border: none;
-    border-radius: 4px;
-}
-
-.search-toggle:checked + .search-icon + .search-bar-container {
-    display: block;
-}
-
+    background: none;
+    outline: none;
+    float: left;
+    padding:0;
+    color:black;
+    font-size: 16px;
+    transition:0.4s;
+    line-height: 40px;
+    width: 0px
+  }
+  
+  .search-box.active > .search-txt {
+    width:200px;
+    padding: 0 6px;
+  }
+  
+  .search-box:hover > .search-btn {
+    background: #004D7B;
+    color: #fff;
+  }
 /* HAMBURGER MENU */ 
 .burger {
     display: none;
@@ -945,7 +965,14 @@ margin: 0px;
         text-align: center;
         transition: 0.3s;
         z-index: 1000;
+        gap: 0;
+        padding-bottom: 15px;
     }
+    .search-btn {
+        color: #FFF;
+        background-color: #0080ff;
+    }
+
     .navigation.active {
         right: 0%;
     }
