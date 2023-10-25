@@ -1,43 +1,57 @@
  // Form Validation
- function validateForm() {
-    const nameInput = document.getElementById('name');
-    const phoneInput = document.getElementById('phone');
-    const emailInput = document.getElementById('email');
-    const subjectInput = document.getElementById('subject');
-    const messageInput = document.querySelector('.message-box');
+  const nameInput = document.getElementById('name-error');
+  const phoneInput = document.getElementById('phone-error');
+  const emailInput = document.getElementById('email-error');
+  const subjectInput = document.getElementById('sub-error');
+  const messageInput = document.getElementById('msg-error');
+  const submit = document.getElementById('submit-error');
   
-    // Check if the name is not empty
-    if (nameInput.value.trim() === '') {
-      alert('Name cannot be empty');
+
+  function validateName(){
+    var name = document.querySelector("#name").value;
+    if(name.length == 0){
+      nameInput.textContent = 'Name is required';
       return false;
-    } 
-  
-    // Check if the phone number is not empty and contains only numbers
-    if (phoneInput.value.trim() === '' || !/^\+\d+$/.test(phoneInput.value)) {
-      alert('Please enter a valid phone number');
+    } else if (!name.match(/^[A-Za-z]+(?:\s+[A-Za-z]+)+$/)){
+      nameInput.textContent = 'Write the full name';
+      nameInput.style.color = "red";
       return false;
+    } else { 
+      nameInput.textContent = 'valid';
+      nameInput.style.color = "green";
+      return true;
     }
-  
-    // Check if the email is valid using a simple regex
-    const emailRegex = /^[a-zA-Z0-9]+@[a-zA-Z]+\.[a-zA-Z]+$/;
-    if (!emailRegex.test(emailInput.value)) {
-      alert('Please enter a valid email address');
-      return false;
-    }
-  
-    // Check if the subject is not empty
-    if (subjectInput.value.trim() === '') {
-      alert('Subject cannot be empty');
-      return false;
-    }
-  
-    // Check if the message is not empty
-    if (messageInput.value.trim() === '') {
-      alert('Message cannot be empty');
-      return false;
-    }
-  
-    alert('Form submitted successfully!');
-    return true;
   }
-  
+
+  function validatePhone(){
+    var phone = document.querySelector("#phone").value;
+    if (phone.length==0) {
+      phoneInput.textContent = 'Phone number is required';
+      phoneInput.style.color = "red";
+      return false;
+    } else if (!phone.match(/\d{10}/)){
+      phoneInput.textContent = 'Invalid Phone Number';
+      phoneInput.style.color = "red";
+      return false;
+    } else {
+      phoneInput.textContent = 'Valid';
+      phoneInput.style.color = "green";
+      return true;
+    }
+  }
+  function validateEmail(){
+    var email = document.querySelector('#email').value;
+    if (email.length === 0 ) {
+      emailInput.textContent = 'E-mail is required';
+      emailInput.style.color = "red";
+      return false;
+    } else if (!email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)){
+      emailInput.textContent = 'Invalid E-Mail Address';
+      emailInput.style.color = "red";
+      return false;
+    } else {
+      emailInput.textContent = 'Valid Email';
+      emailInput.style.color = "green";
+      return true;
+    }
+  }

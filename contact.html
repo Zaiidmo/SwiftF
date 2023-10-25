@@ -76,13 +76,32 @@
     <!-- Conversation Section -->
     <section class="conversation">
         <h1>Let's Have a conversation</h1>
-        <form action="contact.html" class="contact-form" onsubmit="return validateForm()">
-            <input type="text" id="name" placeholder="name">
-            <input type="text" id="phone" placeholder="phone number">
-            <input type="text" id="email" placeholder="Email Address">
-            <input type="text" id="subject" placeholder="subject">
-            <input class="message-box" type="text" placeholder="Message"> 
-            <input type="submit" class="send-button" value="submit" >           
+        <form action="contact.html" class="contact-form">
+            <div class="input">
+                <input type="text" id="name" placeholder="name" onkeyup="validateName()">
+                <span id="name-error"></span>
+            </div>        
+            <div class="input">
+                <input type="text" id="phone" placeholder="phone number" onkeyup="validatePhone()">
+                <span id="phone-error"></span>
+            </div>
+            <div class="input">
+                <input type="text" id="email" placeholder="Email Address" onkeyup="validateEmail()">
+                <span id="email-error"></span>
+            </div>
+            <div class="input">
+                <input type="text" id="subject" placeholder="subject">
+                <span id="sub-error"></span>
+            </div>
+            <div class="input">
+                <input class="message-box" type="text" placeholder="Message"> 
+                <span id="msg-error"></span>
+            </div>
+
+            <button onclick="return submitForm()" class="send-button"> Submit </button> 
+            <span id="submit-error"></span>
+  
+            
         </form>
         <div class="contact-info">
             <h1>How to reach us ?</h1>
