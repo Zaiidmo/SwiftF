@@ -76,7 +76,7 @@
     <!-- Conversation Section -->
     <section class="conversation">
         <h1>Let's Have a conversation</h1>
-        <form action="contact.html" class="contact-form">
+        <form action="contact.html" class="contact-form" id="contact-form">
             <div class="input">
                 <input type="text" id="name" placeholder="name" onkeyup="validateName()">
                 <span id="name-error"></span>
@@ -98,7 +98,7 @@
                 <span id="msg-error"></span>
             </div>
 
-            <button onclick="return submitForm()" class="send-button"> Submit </button> 
+            <button onclick="return submitForm()" id="send-button" class="send-button" type="submit" aria-disabled="true"> Submit </button> 
             <span id="submit-error"></span>
   
             

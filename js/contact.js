@@ -94,11 +94,13 @@ function validateMessage(){
 
 function submitForm(){
   //validate all fields before submitting the form
+  var submitButton = document.querySelector('#send-button')
   if(!validateName() || !validateEmail() || !validateSubject() || !validateMessage()) {
-    submit.textContent = 'Please enter your informations ';
+    submit.textContent = 'Please fill in all the required fields ';
     submit.style.color = "red"
-    setTimeout(function() {Submit.style.color = "none";},3000);
     return false;
-  } else { alert("your form Has been submitted ")}
-   
+    submitButton.ariaDisabled = 'true';
+  } else { 
+    alert("your form Has been submitted ")}
+    submitButton.ariaDisabled = 'false';
 }
