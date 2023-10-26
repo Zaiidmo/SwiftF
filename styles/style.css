@@ -935,9 +935,14 @@ margin: 0px;
     font-size: 14px;
     color: red;
 }
-.message-box{
+#message-box{
     width: 100%;
-    height: 200px;
+    height: auto;
+    padding-inline-start: 20px;
+    padding-block-start: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+
 }
 .send-button {
     width: 600px;
@@ -1168,6 +1173,9 @@ margin: 0px;
     }
     .conversation h1{
         font-size: 30px;
+    }
+    .conversation #message-box {
+        width: 100%;
     }
     .send-button{
         width: auto;

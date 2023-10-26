@@ -55,3 +55,50 @@
       return true;
     }
   }
+
+  function validateSubject(){
+    var subject = document.querySelector('#subject').value;
+    if (subject.length===0){
+      subjectInput.textContent = 'Subject is required';
+      subjectInput.style.color = "red";
+      return false;
+  } else if (subject.length <5 || subject.length > 20){
+    subjectInput.textContent = 'Subject must be between 5 and 20 characters long';
+    subjectInput.style.color = "red";
+    return false;
+  } else {
+    subjectInput.textContent = 'Valid Subject';
+    subjectInput.style.color = "green";
+    return true; 
+  }
+}
+function validateMessage(){
+  var message = document.querySelector('#message-box').value;
+  let required = 100;
+  let charLeft = required - message.length;
+
+  if (message.length == 0){
+    messageInput.textContent = 'Message is required';
+    messageInput.style.color = "red";
+    return false;
+    } else if (message.length<required){
+      messageInput.textContent = charLeft + ' more characters required ';
+      messageInput.style.color = "red";
+      return false;
+    } else {
+      messageInput.textContent = 'Valid Message';
+      messageInput.style.color = "green";
+      return true;
+      }
+}
+
+function submitForm(){
+  //validate all fields before submitting the form
+  if(!validateName() || !validateEmail() || !validateSubject() || !validateMessage()) {
+    submit.textContent = 'Please enter your informations ';
+    submit.style.color = "red"
+    setTimeout(function() {Submit.style.color = "none";},3000);
+    return false;
+  } else { alert("your form Has been submitted ")}
+   
+}

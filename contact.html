@@ -90,11 +90,11 @@
                 <span id="email-error"></span>
             </div>
             <div class="input">
-                <input type="text" id="subject" placeholder="subject">
+                <input type="text" id="subject" placeholder="subject" onkeyup="validateSubject()">
                 <span id="sub-error"></span>
             </div>
-            <div class="input">
-                <input class="message-box" type="text" placeholder="Message"> 
+            <div class="input message-box">
+                <textarea id="message-box" rows="10" name="Message" placeholder="Message" onkeyup="validateMessage()"></textarea>
                 <span id="msg-error"></span>
             </div>
 
