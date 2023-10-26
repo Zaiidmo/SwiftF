@@ -472,7 +472,7 @@ footer .footerbot {
     justify-content: center;
     align-items: center;
     height: 60vh;
-    background-image: url(/Images/about.jpg);
+    background-image: url(/images/about.jpg);
     background-color: black ;
     background-size: cover;
 }
@@ -534,7 +534,7 @@ footer .footerbot {
 .counts {
     padding: 30px 90px;
     background-color: #094b72;
-    background-image: url(/Images/Patterns.png);
+    background-image: url(/images/Patterns.png);
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -759,7 +759,7 @@ margin: 0px;
     justify-content: center;
     align-items: center;
     height: 60vh;
-    background-image: url(/Images/services.jpg);
+    background-image: url(/images/services.jpg);
     background-color: black ;
     background-size: cover;
 }
@@ -886,7 +886,7 @@ margin: 0px;
     justify-content: center;
     align-items: center;
     height: 60vh;
-    background-image: url(/Images/Contact.jpg);
+    background-image: url(/images/Contact.jpg);
     background-size: cover;
 }
 
