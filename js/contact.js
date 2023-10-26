@@ -5,6 +5,8 @@
   const subjectInput = document.getElementById('sub-error');
   const messageInput = document.getElementById('msg-error');
   const submit = document.getElementById('submit-error');
+  const form = document.getElementById('contact-form');
+  var submitButton = document.querySelector('#send-button')
   
 
   function validateName(){
@@ -92,15 +94,16 @@ function validateMessage(){
       }
 }
 
-function submitForm(){
-  //validate all fields before submitting the form
-  var submitButton = document.querySelector('#send-button')
-  if(!validateName() || !validateEmail() || !validateSubject() || !validateMessage()) {
-    submit.textContent = 'Please fill in all the required fields ';
-    submit.style.color = "red"
-    return false;
-    submitButton.ariaDisabled = 'true';
-  } else { 
-    alert("your form Has been submitted ")}
-    submitButton.ariaDisabled = 'false';
-}
+form.addEventListener('input', function(event){
+  event.preventDefault();
+  if(validateName() && validateEmail() && validateSubject() && validateMessage()) {
+    submitButton.removeAttribute("disabled")
+    console.log('Oook');
+
+    return true;
+    } else {
+      submitButton.setAttribute("disabled" , "");
+      console.log('Please fill in all fields.');
+      return false;
+    }
+  })

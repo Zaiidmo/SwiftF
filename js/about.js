@@ -26,7 +26,7 @@ const slideWidth = 750;
 
 nextbtn.addEventListener("click", function() {
   
-  if(index < clients.length - 1){
+  if(index < clients.length - 2){
     index++;
     move += slideWidth ;
   } else {
@@ -39,7 +39,7 @@ prvbtn.addEventListener("click", function() {
     index--;
     move -= slideWidth;
   } else {
-    index = clients.length - 1;
+    index = clients.length - 2;
     move = index * slideWidth;
   }
   slider.style.transform = `translateX(${-move}px)`;

@@ -254,7 +254,7 @@ h1, h2{
     /* padding: 30px; */
     width:400px;
     height: 100px;
-    bottom: 80px;
+    bottom: -40px;
     transform: translateX(160px);
     text-align: center;
     font-family: "Poppins";
@@ -604,7 +604,7 @@ margin: 0px;
 .testimonial .clients {
     display: flex;
     justify-content: start;
-    width: 750px;
+    width: 1500px;
     overflow: hidden;
     margin-top: 20px;
 
@@ -615,9 +615,10 @@ margin: 0px;
     align-items: center;
     position: relative;
     height: auto;
-    width: auto;
-    gap: 50px;  
+    /* width: 100%; */
     transition: .5s;
+    margin-left: 40px;
+    gap: 35px;
 }
 .previous, .next {
     cursor: pointer;
@@ -662,7 +663,7 @@ margin: 0px;
     line-height: 40px;
     box-sizing: border-box;
     width: 100%;
-    height: 70%;
+    height: 80%;
     padding: 0 15px;
 }
 
@@ -738,13 +739,14 @@ margin: 0px;
     margin-bottom: 20px;
 }
 .content { 
-    padding: 0 18 px;
+    padding: 0px 18 px;
     display: none;
     overflow: hidden;
     text-align: left;
 }
 .coll, .collapse:hover {
     background-color: #595959;
+    color: white;
 }
 /* ------------------------------------ */
 /* Page "Our services" */ 
@@ -789,7 +791,7 @@ margin: 0px;
     align-content: center;
 }
 .moreservices { 
-    padding: 0 18 px;
+    padding: 0px 18 px;
     display: none;
     overflow: hidden;
     text-align: left;
@@ -927,6 +929,9 @@ margin: 0px;
     font-weight: bold;
     letter-spacing: 2px;
     padding-inline-start: 20px;
+    border-radius: 10px;
+    border: 0.5px solid blue;
+
 }
 .input span{
     position: absolute;
@@ -942,6 +947,9 @@ margin: 0px;
     padding-block-start: 20px;
     font-weight: bold;
     letter-spacing: 2px;
+    border-radius: 10px;
+    border: 0.5px solid blue;
+    
 
 }
 .send-button {
@@ -963,6 +971,10 @@ margin: 0px;
 .contact-form .send-button:hover {
     background-color: transparent;
     color: #0355cc;
+}
+.contact-form .send-button:disabled {
+    opacity: 20%;
+    cursor: default;
 }
 .contact-info {
     display: flex;
@@ -1088,7 +1100,7 @@ margin: 0px;
         align-items: center;
     }
     .slider_section .name {
-        bottom: -830px;
+        bottom: -950px;
     }
     .partners {
         display: flex;
@@ -1112,6 +1124,14 @@ margin: 0px;
         width:auto;
         height: auto;
         font-size: small;
+    }
+    .clients_slider {
+        width: 100%;
+        gap: 45px;
+        margin-left: 0px;
+    }
+    .testimonial .clients {
+        width: 120%;
     }
     .collapse {
         height: auto;
