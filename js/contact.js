@@ -4,7 +4,6 @@
   const emailInput = document.getElementById('email-error');
   const subjectInput = document.getElementById('sub-error');
   const messageInput = document.getElementById('msg-error');
-  const submit = document.getElementById('submit-error');
   const form = document.getElementById('contact-form');
   var submitButton = document.querySelector('#send-button')
   
@@ -98,12 +97,9 @@ form.addEventListener('input', function(event){
   event.preventDefault();
   if(validateName() && validateEmail() && validateSubject() && validateMessage()) {
     submitButton.removeAttribute("disabled")
-    console.log('Oook');
-
     return true;
     } else {
       submitButton.setAttribute("disabled" , "");
-      console.log('Please fill in all fields.');
       return false;
     }
   })
